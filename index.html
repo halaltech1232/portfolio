@@ -1,91 +1,366 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>H M Abdullah Tahsin | Portfolio</title>
+
+  <!-- Content Security Policy (CSP) -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; form-action 'self' https://formspree.io; connect-src 'self' https://formspree.io;">
+
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="H M Abdullah Tahsin | AI Data Infrastructure & DevOps Engineer">
+  <meta name="description" content="Portfolio of H M Abdullah Tahsin, building scalable AI data infrastructure, automation pipelines, and cloud solutions with Python, Docker, Linux, and SQL.">
+  <meta name="keywords" content="H M Abdullah Tahsin, AI Data Infrastructure, DevOps Engineer, Python, Docker, Linux, SQL, University of Rajshahi, Data Pipelines">
+  <meta name="author" content="H M Abdullah Tahsin">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0b1020">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://halaltech1232.github.io/portfolio/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://halaltech1232.github.io/portfolio/">
+  <meta property="og:site_name" content="H M Abdullah Tahsin Portfolio">
+  <meta property="og:title" content="H M Abdullah Tahsin | AI Data Infrastructure & DevOps Engineer">
+  <meta property="og:description" content="Building reliable AI data infrastructure, cloud automation, and containerized workflows with Python, Docker, and Linux.">
+  <meta property="og:image" content="https://halaltech1232.github.io/portfolio/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://halaltech1232.github.io/portfolio/">
+  <meta name="twitter:title" content="H M Abdullah Tahsin | AI Data Infrastructure & DevOps Engineer">
+  <meta name="twitter:description" content="Building reliable AI data infrastructure, cloud automation, and containerized workflows with Python, Docker, and Linux.">
+  <meta name="twitter:image" content="https://halaltech1232.github.io/portfolio/og-image.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232dd4bf'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='15' font-weight='700' text-anchor='middle' fill='%230b1020'%3EHT%3C/text%3E%3C/svg%3E">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="style.css">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>H M Abdullah Tahsin | Portfolio</title>
-<meta name="description" content="BBA student at the University of Rajshahi learning AI data infrastructure and DevOps.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-  :root {
-    color-scheme: light dark;
-    --bg: #f1f4f8; --text: #14213d; --muted: #51607a; --link: #1d4ed8;
-    --l1: #dbe6f5; --l2: #b3cbe8; --l3: #3f6aa3; --l4: #14284a;
-    --t1: #14213d; --t2: #14213d; --t3: #ffffff; --t4: #ffffff;
-    --serif: Fraunces, "Iowan Old Style", Palatino, Georgia, serif;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #0d1523; --text: #e8eef8; --muted: #9fb0c8; --link: #8db4ff;
-      --l1: #1a2840; --l2: #223557; --l3: #2d4a7a; --l4: #3b639c;
-      --t1: #e8eef8; --t2: #e8eef8; --t3: #e8eef8; --t4: #ffffff;
-    }
-  }
 
-  * { box-sizing: border-box; }
-  <script src="script.js" defer></script>
-  body {
-    margin: 0; background: var(--bg); color: var(--text);
-    font: 400 1.0625rem/1.65 "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
-  }
-  main { max-width: 46rem; margin: 0 auto; padding: clamp(3rem, 10vw, 7rem) 1.5rem 5rem; }
-
-  h1 {
-    font: 700 clamp(2.6rem, 9vw, 4.75rem)/1.02 var(--serif);
-    letter-spacing: -0.02em; margin: 0 0 1.25rem;
-  }
-  .role { font-size: 1.25rem; font-weight: 500; margin: 0 0 0.5rem; }
-  .about { color: var(--muted); max-width: 34rem; margin: 0; }
-
-  .links { display: flex; flex-wrap: wrap; gap: 0.5rem 1.75rem; margin: 2rem 0 0; }
-  a { color: var(--link); font-weight: 600; text-decoration-thickness: 2px; text-underline-offset: 0.25em; }
-  a:focus-visible { outline: 3px solid var(--link); outline-offset: 4px; border-radius: 2px; }
-
-  h2 { font: 600 1.75rem/1.2 var(--serif); margin: 5rem 0 0.4rem; }
-  .sub { color: var(--muted); margin: 0 0 1.75rem; }
-
-  .stack { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 3px; }
-  .stack li {
-    display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap;
-    padding: var(--p) 1.75rem;
-    animation: drop 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) both;
-  }
-  .stack li:first-child { border-radius: 14px 14px 0 0; }
-  .stack li:last-child { border-radius: 0 0 14px 14px; }
-  .stack strong { font: 600 1.75rem/1.2 var(--serif); }
-  .stack span { font-size: 0.95rem; opacity: 0.8; }
-
-  .python { --p: 1.25rem; background: var(--l1); color: var(--t1); animation-delay: 0.36s; }
-  .sql    { --p: 1.35rem; background: var(--l2); color: var(--t2); animation-delay: 0.24s; }
-  .docker { --p: 1.6rem;  background: var(--l3); color: var(--t3); animation-delay: 0.12s; }
-  .linux  { --p: 1.9rem;  background: var(--l4); color: var(--t4); animation-delay: 0s; }
-
-  @keyframes drop { from { opacity: 0; transform: translateY(-1.5rem); } }
-  @media (prefers-reduced-motion: reduce) { .stack li { animation: none; } }
-</style>
+  <script>document.documentElement.classList.replace('no-js', 'js');</script>
 </head>
+
 <body>
-<main>
-  <h1>H M Abdullah Tahsin</h1>
-  <p class="role">BBA student at the University of Rajshahi</p>
-  <p class="about">I’m learning my way into AI data infrastructure and DevOps.</p>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="gh" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></symbol>
+    <symbol id="in" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0z"/></symbol>
+  </svg>
 
-  <p class="links">
-    <a href="https://www.linkedin.com/in/h-m-abdullah-tahsin-a8602a43a" target="_blank" rel="noopener">LinkedIn</a>
-    <a href="https://github.com/halaltech1232" target="_blank" rel="noopener">GitHub</a>
-  </p>
+  <a class="skip" href="#about">Skip to content</a>
 
-  <h2>Skill stack</h2>
-  <p class="sub">Built from the bottom up.</p>
-  <ul class="stack">
-    <li class="python"><strong>Python</strong><span>Programming language</span></li>
-    <li class="sql"><strong>SQL</strong><span>Query language</span></li>
-    <li class="docker"><strong>Docker</strong><span>Containers</span></li>
-    <li class="linux"><strong>Linux</strong><span>Operating system</span></li>
-  </ul>
-</main>
+  <header class="nav">
+    <div class="wrap nav-in">
+      <a href="#top" class="logo robot-logo" title="H M Abdullah Tahsin — Home">
+        <span class="robot">🤖</span>
+        <span>HT</span>
+      </a>
+
+      <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="links">Menu</button>
+
+      <nav id="links" class="nav-links" aria-label="Main">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="top" class="hero">
+      <div class="wrap hero-in">
+        <div>
+          <h1>H M Abdullah Tahsin</h1>
+          <p class="headline">DevOps &amp; AI Infrastructure Enthusiast</p>
+          <p class="lead">
+            I specialize in Python, Docker, Linux, and SQL.
+          </p>
+
+          <div class="actions">
+            <a class="btn primary" href="#projects">View Projects</a>
+
+            <a
+              class="btn"
+              href="H-M-Abdullah-Tahsin-Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              download="H-M-Abdullah-Tahsin-Resume.pdf"
+            >
+              View Resume
+            </a>
+
+            <a class="btn" href="#contact">Contact Me</a>
+          </div>
+
+          <p class="social">
+            <a href="https://github.com/halaltech1232" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+              <svg width="24" height="24" fill="currentColor"><use href="#gh" /></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/h-m-abdullah-tahsin-a8602a43a" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+              <svg width="24" height="24" fill="currentColor"><use href="#in" /></svg>
+            </a>
+          </p>
+        </div>
+
+        <div class="hero-visual">
+          <img
+            src="photo.png"
+            alt="Portrait of H M Abdullah Tahsin"
+            class="hero-photo"
+            width="220"
+            height="220"
+          >
+        </div>
+        <div class="term" role="img" aria-label="Terminal graphic showing a data pipeline running">
+          <div class="dots"><i></i><i></i><i></i></div>
+          <pre>$ docker compose up -d
+<b>db</b>   started
+$ python pipeline.py
+extract    <b>done</b>
+transform  <b>done</b>
+load       <b>done</b>
+$ <span class="cur"></span></pre>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap">
+        <h2 class="reveal">About Me</h2>
+
+        <div class="about">
+          <div class="reveal">
+            <p>
+              I’m a BBA student at the University of Rajshahi, building practical skills in AI data
+              infrastructure and DevOps. My business background helps me think about systems in terms
+              of reliability, clarity, and real-world usefulness.
+            </p>
+
+            <p>
+              I’m currently learning Python, SQL, Linux, Docker, and cloud fundamentals through
+              hands-on projects. I enjoy understanding how automation, data workflows, and developer
+              tools fit together.
+            </p>
+
+            <p>My goal is to turn consistent learning into dependable systems and useful projects.</p>
+          </div>
+
+          <div class="grid small">
+            <div class="card reveal">
+              <h3>AI Data Infrastructure</h3>
+              <p>Data pipelines, databases, and reliable workflows.</p>
+            </div>
+
+            <div class="card reveal">
+              <h3>DevOps &amp; Automation</h3>
+              <p>Scripting, CI/CD concepts, and repeatable processes.</p>
+            </div>
+
+            <div class="card reveal">
+              <h3>Python &amp; SQL</h3>
+              <p>Programming, data analysis, and database querying.</p>
+            </div>
+
+            <div class="card reveal">
+              <h3>Linux &amp; Docker</h3>
+              <p>Command-line skills, containers, and system basics.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="wrap">
+        <h2 class="reveal">Projects &amp; Learning Work</h2>
+        <p class="sub reveal">A selection of projects I am building and improving.</p>
+
+        <div class="grid">
+          <article class="card reveal">
+            <div class="thumb" style="--h:172" aria-hidden="true">pipeline.py</div>
+            <h3>Dockerized Data Pipeline</h3>
+            <p>A containerized extract, transform, and load workflow that moves raw data into a SQL database.</p>
+            <p class="tags"><span>Python</span><span>Docker</span><span>SQL</span></p>
+            <p class="links">
+              <a class="btn" href="https://github.com/halaltech1232" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <span class="soon">Coming soon</span>
+            </p>
+          </article>
+
+          <article class="card reveal">
+            <div class="thumb" style="--h:210" aria-hidden="true">backup.sh</div>
+            <h3>Linux Server Automation Toolkit</h3>
+            <p>Shell scripts that automate routine server upkeep such as backups and log cleanup.</p>
+            <p class="tags"><span>Bash</span><span>Linux</span><span>Cron</span></p>
+            <p class="links">
+              <a class="btn" href="https://github.com/halaltech1232" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <span class="soon">Coming soon</span>
+            </p>
+          </article>
+
+          <article class="card reveal">
+            <div class="thumb" style="--h:250" aria-hidden="true">SELECT *</div>
+            <h3>SQL Analytics Dashboard</h3>
+            <p>Queries and reports that turn a relational dataset into clear business metrics.</p>
+            <p class="tags"><span>SQL</span><span>Python</span><span>Pandas</span></p>
+            <p class="links">
+              <a class="btn" href="https://github.com/halaltech1232" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <span class="soon">Coming soon</span>
+            </p>
+          </article>
+
+          <article class="card reveal">
+            <div class="thumb" style="--h:190" aria-hidden="true">usage.csv</div>
+            <h3>Cloud Cost Monitoring Concept</h3>
+            <p>A concept tool that reads usage data and flags unusual cloud spending.</p>
+            <p class="tags"><span>Python</span><span>APIs</span><span>CSV</span></p>
+            <p class="links">
+              <a class="btn" href="https://github.com/halaltech1232" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <span class="soon">Coming soon</span>
+            </p>
+          </article>
+
+          <article class="card reveal">
+            <div class="thumb" style="--h:225" aria-hidden="true">ci.yml</div>
+            <h3>CI/CD Pipeline Demo</h3>
+            <p>An automated build and test workflow that packages an app as a Docker image.</p>
+            <p class="tags"><span>GitHub Actions</span><span>Docker</span></p>
+            <p class="links">
+              <a class="btn" href="https://github.com/halaltech1232" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <span class="soon">Coming soon</span>
+            </p>
+          </article>
+
+          <article class="card reveal">
+            <div class="thumb" style="--h:160" aria-hidden="true">index.html</div>
+            <h3>Personal Portfolio Website</h3>
+            <p>This site, built with plain HTML, CSS, and JavaScript and hosted on GitHub Pages.</p>
+            <p class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></p>
+            <p class="links">
+              <a class="btn" href="https://github.com/halaltech1232/portfolio" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a class="btn" href="https://halaltech1232.github.io/portfolio/">Live demo</a>
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="wrap">
+        <h2 class="reveal">Technical Toolkit</h2>
+
+        <div class="grid">
+          <div class="card reveal">
+            <h3>Programming</h3>
+            <p class="tags"><span>Python</span><span>SQL</span><span>Bash</span></p>
+          </div>
+
+          <div class="card reveal">
+            <h3>Data</h3>
+            <p class="tags"><span>Pandas</span><span>Data Cleaning</span><span>Data Pipelines</span><span>Databases</span></p>
+          </div>
+
+          <div class="card reveal">
+            <h3>DevOps</h3>
+            <p class="tags"><span>Docker</span><span>Linux</span><span>Git</span><span>GitHub Actions</span><span>CI/CD</span></p>
+          </div>
+
+          <div class="card reveal">
+            <h3>Cloud &amp; Infrastructure</h3>
+            <p class="tags"><span>Cloud fundamentals</span><span>Networking</span><span>Virtualization</span></p>
+          </div>
+
+          <div class="card reveal">
+            <h3>Business</h3>
+            <p class="tags"><span>Business Analysis</span><span>Communication</span><span>Problem Solving</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="wrap">
+        <h2 class="reveal">Education</h2>
+
+        <div class="card reveal">
+          <h3>University of Rajshahi</h3>
+          <p>Bachelor of Business Administration (BBA)</p>
+          <p class="muted">Expected graduation: 2029</p>
+          <p class="muted">Learning focus alongside my degree: Python, SQL, Linux, Docker, and cloud fundamentals.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <h2 class="reveal">Get in Touch</h2>
+        <p class="sub reveal">
+          I’m open to learning opportunities, internships, collaborations, and conversations about
+          AI data infrastructure and DevOps.
+        </p>
+
+        <p class="actions reveal">
+          <a class="btn primary" href="mailto:tahsinhawlader64200@gmail.com">Email me</a>
+          <a class="btn" href="https://www.linkedin.com/in/h-m-abdullah-tahsin-a8602a43a" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a class="btn" href="https://github.com/halaltech1232" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </p>
+
+        <form class="card reveal" action="https://formspree.io/f/xwllqabp" method="POST">
+          <!-- Honeypot spam trap (hidden from users) -->
+          <input type="text" name="_gotcha" style="display:none !important" tabindex="-1" autocomplete="off">
+
+          <label>
+            Name
+            <input name="name" placeholder="e.g. John Doe" required autocomplete="name">
+          </label>
+
+          <label>
+            Email
+            <input type="email" name="email" placeholder="name@example.com" required autocomplete="email">
+          </label>
+
+          <label>
+            Message
+            <textarea name="message" placeholder="What would you like to discuss?" rows="4" required></textarea>
+          </label>
+
+          <p class="form-hint">I typically respond within 24 hours. No spam, ever.</p>
+
+          <button class="btn primary" type="submit">Send message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <p>© 2026 H M Abdullah Tahsin</p>
+
+      <p class="social">
+        <a href="https://github.com/halaltech1232" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+          <svg width="20" height="20" fill="currentColor"><use href="#gh" /></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/h-m-abdullah-tahsin-a8602a43a" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+          <svg width="20" height="20" fill="currentColor"><use href="#in" /></svg>
+        </a>
+      </p>
+
+      <p class="muted">Built with HTML, CSS, and JavaScript</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
