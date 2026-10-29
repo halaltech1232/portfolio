@@ -318,28 +318,31 @@ $ <span class="cur"></span></pre>
         </p>
 
         <form class="card reveal" action="https://formspree.io/f/xwllqabp" method="POST">
-          <!-- Honeypot spam trap (hidden from users) -->
-          <input type="text" name="_gotcha" style="display:none !important" tabindex="-1" autocomplete="off">
+  <!-- Dynamic subject line so Gmail doesn't thread every message into one email -->
+  <input type="hidden" name="_subject" value="New Contact Form Submission">
 
-          <label>
-            Name
-            <input name="name" placeholder="e.g. John Doe" required autocomplete="name">
-          </label>
+  <!-- Honeypot field (keeps bots out) -->
+  <input type="text" name="_gotcha" style="display:none !important" tabindex="-1" autocomplete="off">
 
-          <label>
-            Email
-            <input type="email" name="email" placeholder="name@example.com" required autocomplete="email">
-          </label>
+  <label>
+    Name
+    <input name="name" placeholder="e.g. John Doe" required autocomplete="name">
+  </label>
 
-          <label>
-            Message
-            <textarea name="message" placeholder="What would you like to discuss?" rows="4" required></textarea>
-          </label>
+  <label>
+    Email
+    <input type="email" name="email" placeholder="name@example.com" required autocomplete="email">
+  </label>
 
-          <p class="form-hint">I typically respond within 24 hours. No spam, ever.</p>
+  <label>
+    Message
+    <textarea name="message" placeholder="What would you like to discuss?" rows="4" required></textarea>
+  </label>
 
-          <button class="btn primary" type="submit">Send message</button>
-        </form>
+  <p class="form-hint">I typically respond within 24 hours. No spam, ever.</p>
+
+  <button class="btn primary" type="submit">Send message</button>
+</form>
       </div>
     </section>
   </main>
