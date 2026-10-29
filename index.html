@@ -1,19 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>H M Abdullah Tahsin</title>
-  <style>
-    body { font-family: system-ui, sans-serif; max-width: 700px; margin: 4rem auto; padding: 0 1rem; line-height: 1.6; }
-    h1 { margin-bottom: 0; }
-    .sub { color: #666; margin-top: 0.25rem; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>H M Abdullah Tahsin | Portfolio</title>
+<meta name="description" content="BBA student at the University of Rajshahi learning AI data infrastructure and DevOps.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #f1f4f8; --text: #14213d; --muted: #51607a; --link: #1d4ed8;
+    --l1: #dbe6f5; --l2: #b3cbe8; --l3: #3f6aa3; --l4: #14284a;
+    --t1: #14213d; --t2: #14213d; --t3: #ffffff; --t4: #ffffff;
+    --serif: Fraunces, "Iowan Old Style", Palatino, Georgia, serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0d1523; --text: #e8eef8; --muted: #9fb0c8; --link: #8db4ff;
+      --l1: #1a2840; --l2: #223557; --l3: #2d4a7a; --l4: #3b639c;
+      --t1: #e8eef8; --t2: #e8eef8; --t3: #e8eef8; --t4: #ffffff;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 400 1.0625rem/1.65 "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  main { max-width: 46rem; margin: 0 auto; padding: clamp(3rem, 10vw, 7rem) 1.5rem 5rem; }
+
+  h1 {
+    font: 700 clamp(2.6rem, 9vw, 4.75rem)/1.02 var(--serif);
+    letter-spacing: -0.02em; margin: 0 0 1.25rem;
+  }
+  .role { font-size: 1.25rem; font-weight: 500; margin: 0 0 0.5rem; }
+  .about { color: var(--muted); max-width: 34rem; margin: 0; }
+
+  .links { display: flex; flex-wrap: wrap; gap: 0.5rem 1.75rem; margin: 2rem 0 0; }
+  a { color: var(--link); font-weight: 600; text-decoration-thickness: 2px; text-underline-offset: 0.25em; }
+  a:focus-visible { outline: 3px solid var(--link); outline-offset: 4px; border-radius: 2px; }
+
+  h2 { font: 600 1.75rem/1.2 var(--serif); margin: 5rem 0 0.4rem; }
+  .sub { color: var(--muted); margin: 0 0 1.75rem; }
+
+  .stack { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 3px; }
+  .stack li {
+    display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap;
+    padding: var(--p) 1.75rem;
+    animation: drop 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  }
+  .stack li:first-child { border-radius: 14px 14px 0 0; }
+  .stack li:last-child { border-radius: 0 0 14px 14px; }
+  .stack strong { font: 600 1.75rem/1.2 var(--serif); }
+  .stack span { font-size: 0.95rem; opacity: 0.8; }
+
+  .python { --p: 1.25rem; background: var(--l1); color: var(--t1); animation-delay: 0.36s; }
+  .sql    { --p: 1.35rem; background: var(--l2); color: var(--t2); animation-delay: 0.24s; }
+  .docker { --p: 1.6rem;  background: var(--l3); color: var(--t3); animation-delay: 0.12s; }
+  .linux  { --p: 1.9rem;  background: var(--l4); color: var(--t4); animation-delay: 0s; }
+
+  @keyframes drop { from { opacity: 0; transform: translateY(-1.5rem); } }
+  @media (prefers-reduced-motion: reduce) { .stack li { animation: none; } }
+</style>
 </head>
 <body>
+<main>
   <h1>H M Abdullah Tahsin</h1>
-  <p class="sub">BBA student at the University of Rajshahi</p>
-  <h2>About me</h2>
-  <p>Learning my way into AI data infrastructure and DevOps. Focus: SQL, Python, Linux, Docker.</p>
+  <p class="role">BBA student at the University of Rajshahi</p>
+  <p class="about">I’m learning my way into AI data infrastructure and DevOps.</p>
+
+  <p class="links">
+    <a href="https://www.linkedin.com/in/h-m-abdullah-tahsin-a8602a43a" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://github.com/halaltech1232" target="_blank" rel="noopener">GitHub</a>
+  </p>
+
+  <h2>Skill stack</h2>
+  <p class="sub">Built from the bottom up.</p>
+  <ul class="stack">
+    <li class="python"><strong>Python</strong><span>Programming language</span></li>
+    <li class="sql"><strong>SQL</strong><span>Query language</span></li>
+    <li class="docker"><strong>Docker</strong><span>Containers</span></li>
+    <li class="linux"><strong>Linux</strong><span>Operating system</span></li>
+  </ul>
+</main>
 </body>
 </html>
