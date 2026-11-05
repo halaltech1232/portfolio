@@ -428,17 +428,31 @@ h1 {
   color: #06241f;
 }
 
-/* Cards */
+/* Cards & Grids */
 .grid {
   display: grid;
   gap: 1.25rem;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
 }
 
+/* Responsive Small Grid (1 col on mobile, 2 on tablet, 3 on desktop) */
 .grid.small {
-  grid-template-columns: 1fr 1fr;
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: 1fr;
 }
 
+@media (min-width: 640px) {
+  .grid.small {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .grid.small {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 .card {
   background: var(--surface);
   border: 1px solid var(--line);
