@@ -1,6 +1,7 @@
 ---
 applyTo: "**/*.css"
 ---
+
 - Use CSS variables from :root for every color, font and spacing value.
 - Mobile-first media queries.
 - Use clamp() for fluid type and spacing.
