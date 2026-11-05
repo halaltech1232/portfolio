@@ -22,6 +22,10 @@
   --terminal-red: #d78c75;
   --terminal-yellow: #d8be77;
   --project-shade: #111713;
+  --portrait-border: rgba(210, 242, 222, 0.24);
+  --portrait-frame-border: rgba(136, 224, 191, 0.24);
+  --portrait-backplate: rgba(136, 224, 191, 0.035);
+  --portrait-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.38);
   --shadow-card: 0 1.5rem 4rem rgba(0, 0, 0, 0.24);
   --shadow-raised: 0 1.5rem 3.5rem rgba(0, 0, 0, 0.34);
   --font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
@@ -522,47 +526,41 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 15rem;
+  padding: 0 var(--space-3) var(--space-3) 0;
 }
 
 .hero-visual::before {
   position: absolute;
-  width: min(86%, 21rem);
-  aspect-ratio: 1;
-  border: 1px solid rgba(136, 224, 191, 0.12);
-  border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(136, 224, 191, 0.1),
-    transparent 68%
-  );
+  width: min(100%, 19rem);
+  aspect-ratio: 4 / 5;
+  transform: translate(var(--space-3), var(--space-3));
+  border: 1px solid var(--portrait-frame-border);
+  border-radius: var(--radius-lg);
+  background: var(--portrait-backplate);
   content: "";
-  animation: orbit-breathe 7s ease-in-out infinite;
+  pointer-events: none;
 }
 
 .hero-photo {
   position: relative;
   display: block;
-  width: clamp(12rem, 23vw, 18rem);
-  aspect-ratio: 1;
-  border: 1px solid rgba(210, 242, 222, 0.42);
-  border-radius: 50%;
+  width: min(100%, 19rem);
+  height: auto;
+  aspect-ratio: 4 / 5;
+  border: 1px solid var(--portrait-border);
+  border-radius: var(--radius-lg);
   background: var(--surface-raised);
-  box-shadow:
-    0 0 0 0.55rem rgba(136, 224, 191, 0.035),
-    0 1.5rem 4rem rgba(0, 0, 0, 0.42);
+  box-shadow: var(--portrait-shadow);
   object-fit: cover;
-  object-position: center 25%;
+  object-position: center;
   transition:
     transform 700ms var(--ease-out),
     box-shadow 700ms var(--ease-out);
 }
 
 .hero-visual:hover .hero-photo {
-  transform: scale(1.025);
-  box-shadow:
-    0 0 0 0.75rem rgba(136, 224, 191, 0.055),
-    0 2rem 5rem rgba(0, 0, 0, 0.48);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-raised);
 }
 
 .term {
@@ -1183,15 +1181,18 @@ footer {
 
   .hero-visual {
     grid-row: 1;
-    min-height: 13rem;
+    --portrait-width: min(72vw, 19rem);
+    padding-right: var(--space-3);
+    padding-bottom: var(--space-3);
+  }
+
+  .hero-visual::before,
+  .hero-photo {
+    width: var(--portrait-width);
   }
 
   .term {
     grid-row: 3;
-  }
-
-  .hero-photo {
-    width: clamp(11rem, 48vw, 15rem);
   }
 }
 
