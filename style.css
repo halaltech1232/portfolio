@@ -753,6 +753,8 @@ p {
 }
 
 #projects .grid {
+  max-width: 48rem;
+  margin-inline: auto;
   grid-template-columns: minmax(0, 1fr);
   gap: var(--space-5);
 }
@@ -1110,18 +1112,10 @@ footer {
   .grid.small {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-
-  #projects .grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
 }
 
 @media (min-width: 64rem) {
   .grid.small {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  #projects .grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
